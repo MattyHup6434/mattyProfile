@@ -15,6 +15,8 @@ const HeaderComponent = ({ toggleDarkMode, darkMode }) => {
 
   return (
     <header className="sticky top-0 z-50 p-4 backdrop-blur-md bg-opacity-30">
+
+
       <div
         className={`absolute inset-0 opacity-20 backdrop-blur-xl rounded-lg pointer-events-none ${
           isDarkMode

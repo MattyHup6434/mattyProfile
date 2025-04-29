@@ -7,7 +7,7 @@ const ProjectsComponent = ({ darkMode }) => {
   const titleColor = darkMode ? "text-teal-400" : "text-blue-600";
 
   return (
-    <Container className="px-4 py-8 mx-auto">
+    <Container className="w-7xl px-4 py-8 mx-auto">
       <Col md={12}>
         <h3 className={`text-3xl font-bold mb-8 ${titleColor}`}>Projects</h3>
         <Row className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">

@@ -10,16 +10,16 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
-
   return (
     <div
-      className={`min-h-screen w-full overflow-x-hidden ease-in-out font-sans ${
+      className={`min-h-screen flex flex-col ${
         darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      <HeaderComponent toggleDarkMode={toggleDarkMode} />
+   <HeaderComponent toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
-      <main>
+
+      <main className="flex-grow">
         <section id="about" className="my-12 px-4 sm:px-8 md:px-16">
           <AvatarComponent darkMode={darkMode} />
         </section>
@@ -33,7 +33,7 @@ function App() {
         </section>
       </main>
 
-      <FooterComponent  darkMode={darkMode} />
+      <FooterComponent darkMode={darkMode} />
     </div>
   );
 }

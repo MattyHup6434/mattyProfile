@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import MattyImage from "../assets/maty2.png";
 
 const ProfilePage = ({ darkMode }) => {
@@ -19,13 +19,9 @@ const ProfilePage = ({ darkMode }) => {
     ? "bg-gray-800 text-white border border-gray-700"
     : "bg-white text-gray-900 border border-gray-200";
   const titleColor = darkMode ? "text-teal-400" : "text-blue-600";
-
+  const toptyle =  darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900";
   return (
-    <div
-      className={`profile-container max-w-4xl mx-auto p-8 rounded-3xl shadow-xl ${
-        darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"
-      }`}
-    >
+    <Container className={`profile-container max-w-4xl mx-auto p-8 rounded-3xl shadow-xl  ${toptyle}`}>
       <Col md={12}>
         <Row className="gap-8">
           <Col md={6} className="avatar-section text-center">
@@ -122,7 +118,7 @@ const ProfilePage = ({ darkMode }) => {
           </Col>
         </Row>
       </Col>
-    </div>
+    </Container>
   );
 };
 
