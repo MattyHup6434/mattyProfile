@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import AvatarComponent from "./components/AvatarComponent";
 import SkillsComponent from "./components/SkillsComponent";
 import ProjectsComponent from "./components/ProjectsComponent";
@@ -10,14 +9,14 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
+
   return (
     <div
       className={`min-h-screen flex flex-col ${
         darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-   <HeaderComponent toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-
+      <HeaderComponent toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
       <main className="flex-grow">
         <section id="about" className="my-12 px-4 sm:px-8 md:px-16">
