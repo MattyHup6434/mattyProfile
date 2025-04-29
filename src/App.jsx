@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import AvatarComponent from "./components/AvatarComponent";
 import SkillsComponent from "./components/SkillsComponent";
 import ProjectsComponent from "./components/ProjectsComponent";
@@ -12,7 +13,9 @@ function App() {
 
   return (
     <div
-      className={darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}
+      className={`min-h-screen w-full overflow-x-hidden ease-in-out font-sans ${
+        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+      }`}
     >
       <HeaderComponent toggleDarkMode={toggleDarkMode} />
 
@@ -28,11 +31,9 @@ function App() {
         <section id="skills" className="my-12 px-4 sm:px-8 md:px-16">
           <SkillsComponent darkMode={darkMode} />
         </section>
-
-   
       </main>
 
-      <FooterComponent />
+      <FooterComponent  darkMode={darkMode} />
     </div>
   );
 }
